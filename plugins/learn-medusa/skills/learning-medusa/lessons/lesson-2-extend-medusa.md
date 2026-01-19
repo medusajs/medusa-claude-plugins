@@ -88,7 +88,7 @@ Medusa provides three tools to extend core features safely:
         Both connected, both isolated!
 ```
 
-**Documentation**: [Module Links](#) | [Workflow Hooks](#) | [Additional Data](#)
+**Documentation**: [Module Links](https://docs.medusajs.com/learn/fundamentals/module-links) | [Workflow Hooks](https://docs.medusajs.com/learn/fundamentals/workflows/workflow-hooks) | [Additional Data](https://docs.medusajs.com/learn/fundamentals/api-routes/additional-data)
 
 ---
 
@@ -108,7 +108,7 @@ A **Module Link** creates a relationship between data models of different module
 - In SQL: A `product_brand` table with `product_id` and `brand_id` columns
 - In Medusa: A link definition that creates this automatically
 
-**Documentation**: [Module Links Guide](#)
+**Documentation**: [Module Links Guide](https://docs.medusajs.com/learn/fundamentals/module-links)
 
 ### Step 2.1: Define the Link
 
@@ -169,8 +169,6 @@ Each product has one brand: isList: false (default) for Brand
 
 **Order matters!** The link configuration order affects how you create links later.
 
-**Documentation**: [defineLink Reference](#)
-
 ### Step 2.2: Sync Link to Database
 
 Module links are stored in a database table. Run:
@@ -183,8 +181,6 @@ This:
 - Creates a `link_product_brand` table (or similar)
 - Stores relationships between product IDs and brand IDs
 - Enables querying across modules
-
-**Documentation**: [Link Migrations](#)
 
 ---
 
@@ -242,8 +238,6 @@ This:
 - [ ] Migrations ran successfully
 - [ ] Build succeeds
 
-**Documentation**: [Checkpoint Guide](#)
-
 ---
 
 ## Part 2: Extend Create Product Workflow
@@ -264,7 +258,7 @@ You can "consume" (listen to) these hooks and perform custom actions.
 - Keep customizations separate and maintainable
 - Workflows remain upgradeable
 
-**Documentation**: [Workflow Hooks Guide](#)
+**Documentation**: [Workflow Hooks Guide](https://docs.medusajs.com/learn/fundamentals/workflows/workflow-hooks)
 
 ### Step 2.2: Consume productsCreated Hook
 
@@ -385,7 +379,7 @@ async (links, { container }) => {
 - Removes links if an error occurs later
 - Maintains data consistency
 
-**Documentation**: [Hook Consumption](#) | [Link Creation](#)
+**Documentation**: [Hook Consumption](https://docs.medusajs.com/learn/fundamentals/workflows/workflow-hooks) | [Link Creation](https://docs.medusajs.com/learn/fundamentals/module-links/link)
 
 ### Step 2.3: Configure additional_data
 
@@ -425,7 +419,7 @@ export default defineMiddlewares({
 - Not all products need a brand
 - Allows creating products without brands
 
-**Documentation**: [Additional Data Validation](#)
+**Documentation**: [Additional Data Validation](https://docs.medusajs.com/learn/fundamentals/api-routes/additional-data)
 
 ---
 
@@ -522,8 +516,6 @@ curl -X POST 'http://localhost:9000/admin/products' \
 - [ ] No errors in server logs
 - [ ] Product creation succeeds
 
-**Documentation**: [Testing Hooks](#)
-
 ---
 
 ## Part 3: Query Linked Records
@@ -559,7 +551,7 @@ curl 'http://localhost:9000/admin/products/{product_id}?fields=+brand.*' \
 - `brand` = Linked model name (singular)
 - `.*` = All properties of brand
 
-**Documentation**: [Fields Parameter Guide](#)
+**Documentation**: [Fields Parameter Guide](https://docs.medusajs.com/api/store#select-fields-and-relations)
 
 ### Querying with Query.graph()
 
@@ -620,7 +612,7 @@ await query.graph({
 **Why "products" (plural)?**
 Because brands are linked to a list of products (`isList: true` in the link definition).
 
-**Documentation**: [Query Guide](#)
+**Documentation**: [Query Guide](https://docs.medusajs.com/learn/fundamentals/module-links/query)
 
 ---
 
@@ -703,8 +695,6 @@ curl 'http://localhost:9000/admin/brands' \
 - [ ] Product retrieved with brand details
 - [ ] Brands retrieved with products
 - [ ] Both queries return expected data
-
-**Documentation**: [Testing Queries](#)
 
 ---
 
@@ -820,6 +810,6 @@ You'll build:
 - A brands management page with a data table
 - Full CRUD operations in the admin dashboard
 
-**Documentation**: [Admin Widgets](#) | [Admin UI Routes](#) | [Medusa UI Components](#)
+**Documentation**: [Admin Widgets](https://docs.medusajs.com/learn/fundamentals/admin/widgets) | [Admin UI Routes](https://docs.medusajs.com/learn/fundamentals/admin/ui-routes) | [Medusa UI Components](https://docs.medusajs.com/ui)
 
 When you're ready, let me know and we'll start Lesson 3!

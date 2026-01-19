@@ -25,7 +25,7 @@ Now that brands exist in the backend, let's build the admin UI:
 - Navigate to a brands management page
 - View all brands and their products in a table
 
-**Documentation**: [Admin Widgets](#) | [Admin UI Routes](#)
+**Documentation**: [Admin Widgets](https://docs.medusajs.com/learn/fundamentals/admin/widgets) | [Admin UI Routes](https://docs.medusajs.com/learn/fundamentals/admin/ui-routes)
 
 ---
 
@@ -54,7 +54,7 @@ export const sdk = new Medusa({
 
 **Important**: Admin uses Vite, so environment variables are `import.meta.env.*`
 
-**Documentation**: [JS SDK Reference](#)
+**Documentation**: [JS SDK Reference](https://docs.medusajs.com/resources/js-sdk)
 
 ---
 
@@ -167,7 +167,7 @@ export const config = defineWidgetConfig({
 - Defines where widget appears
 - Must be exported as `config`
 
-**Documentation**: [Widgets Guide](#) | [Medusa UI Components](#)
+**Documentation**: [Widgets Guide](https://docs.medusajs.com/learn/fundamentals/admin/widgets) | [Medusa UI Components](https://docs.medusajs.com/ui)
 
 ---
 
@@ -198,8 +198,6 @@ export const config = defineWidgetConfig({
 pnpm list @tanstack/react-query --depth=10 | grep @medusajs/dashboard
 pnpm add @tanstack/react-query@[exact-version]
 ```
-
-**Documentation**: [Troubleshooting Widgets](#)
 
 ---
 
@@ -278,7 +276,7 @@ export default defineMiddlewares({
 })
 ```
 
-**Documentation**: [Query Middleware](#)
+**Documentation**: [Request Query Config Middleware](https://docs.medusajs.com/learn/fundamentals/module-links/query#request-query-configurations)
 
 ### Step 3.2: Create Brands UI Route
 
@@ -417,7 +415,7 @@ sdk.client.fetch(`/admin/brands`, {
 - Use `sdk.client.fetch()` for custom routes
 - Pass query parameters in `query` object
 
-**Documentation**: [UI Routes Guide](#) | [DataTable Component](#)
+**Documentation**: [UI Routes Guide](https://docs.medusajs.com/learn/fundamentals/admin/ui-routes) | [DataTable Component](https://docs.medusajs.com/ui/components/data-table)
 
 ---
 
@@ -442,8 +440,6 @@ sdk.client.fetch(`/admin/brands`, {
 - Check API route is working: `curl http://localhost:9000/admin/brands`
 - Check query middleware is configured
 - Verify brands exist in database
-
-**Documentation**: [Troubleshooting UI Routes](#)
 
 ---
 
@@ -509,12 +505,6 @@ git commit -m "Complete Lesson 3: Admin Dashboard customization"
 2. Build for production: `npm run build`
 3. Deploy to [Medusa Cloud](https://cloud.medusajs.com)
 
-**Learn more**:
-- [Advanced Workflow Patterns](#)
-- [Complex Admin Components](#)
-- [Storefront Integration](#)
-- [Testing Guide](#)
-
 **Build more features**:
 - Categories Module
 - Product Reviews
@@ -522,5 +512,3 @@ git commit -m "Complete Lesson 3: Admin Dashboard customization"
 - Custom Shipping Methods
 
 Congratulations on completing the Medusa learning tutorial! You now understand the architecture and can build custom features confidently.
-
-**Documentation**: [What to Build Next](#) | [Best Practices](#)

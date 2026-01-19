@@ -63,7 +63,7 @@ Every custom feature in Medusa follows this flow:
 
 **Consistency**: All features follow the same pattern
 
-**Documentation**: [Learn more about Medusa Architecture](#)
+**Documentation**: [Learn more about Medusa Architecture](https://docs.medusajs.com/learn/introduction/architecture)
 
 ---
 
@@ -118,7 +118,7 @@ Medusa comes with built-in modules like:
 
 We're creating a **Brand Module** for managing brands.
 
-**Documentation**: [Modules Guide](#)
+**Documentation**: [Modules Guide](https://docs.medusajs.com/learn/fundamentals/modules)
 
 ### Step 1.1: Create Module Directory
 
@@ -167,7 +167,7 @@ Medusa automatically adds `created_at`, `updated_at`, and `deleted_at` columns!
 **What about linkable()?**
 Don't add `.linkable()` manually - Medusa adds it automatically. This is a common mistake!
 
-**Documentation**: [Data Models Guide](#)
+**Documentation**: [Data Models Guide](https://docs.medusajs.com/learn/fundamentals/data-models)
 
 ### Step 1.3: Create Module Service
 
@@ -205,7 +205,7 @@ You get all of these for free!
 **Can you add custom methods?**
 Yes! Add them inside the class body. But for basic CRUD, the generated methods are sufficient.
 
-**Documentation**: [Service Factory Reference](#)
+**Documentation**: [Service Factory Reference](https://docs.medusajs.com/resources/service-factory-reference)
 
 ### Step 1.4: Export Module Definition
 
@@ -286,7 +286,7 @@ npx medusa db:migrate
    - Executes the SQL against your database
    - Creates the `brand` table with columns: `id`, `name`, `created_at`, `updated_at`, `deleted_at`
 
-**Documentation**: [Migrations Guide](#)
+**Documentation**: [Migrations Guide](https://docs.medusajs.com/learn/fundamentals/data-models/write-migration)
 
 ---
 
@@ -363,8 +363,6 @@ Run these commands and share the output:
 - [ ] Module registered in `medusa-config.ts`
 - [ ] Service exports properly
 
-**Documentation**: [Checkpoint Guide](#) | [Common Module Errors](#)
-
 ---
 
 ## Part 2: Create the Brand Workflow
@@ -409,7 +407,7 @@ const workflow = createWorkflow("create-brand-with-logo", function (input) {
 - **Retry logic**: Can retry failed steps
 - **Composability**: Workflows can call other workflows
 
-**Documentation**: [Workflows Guide](#)
+**Documentation**: [Workflows Guide](https://docs.medusajs.com/learn/fundamentals/workflows)
 
 ### Step 2.1: Create Brand Step
 
@@ -511,7 +509,7 @@ const logger = container.resolve("logger")
 const link = container.resolve("link")
 ```
 
-**Documentation**: [Workflow Steps](#) | [Medusa Container](#)
+**Documentation**: [Workflow Steps](https://docs.medusajs.com/learn/fundamentals/workflows#1-create-the-steps) | [Medusa Container](https://docs.medusajs.com/learn/fundamentals/medusa-container)
 
 ### Step 2.2: Create Brand Workflow
 
@@ -579,7 +577,7 @@ const brand = await createBrandStep(input)  // No await!
 const brand = createBrandStep(input)  // Step returns immediately
 ```
 
-**Documentation**: [Workflow Composition](#) | [Advanced Workflow Patterns](#)
+**Documentation**: [Workflows](https://docs.medusajs.com/learn/fundamentals/workflows)
 
 ---
 
@@ -659,8 +657,6 @@ const brand = createBrandStep(input)  // Step returns immediately
 - [ ] No `async` keyword in workflow constructor
 - [ ] No `await` when calling steps
 
-**Documentation**: [Checkpoint Guide](#) | [Common Workflow Errors](#)
-
 ---
 
 ## Part 3: Create the API Route
@@ -680,7 +676,7 @@ An **API Route** is a REST endpoint that exposes your features to clients:
 
 **All business logic belongs in workflows!**
 
-**Documentation**: [API Routes Guide](#)
+**Documentation**: [API Routes Guide](https://docs.medusajs.com/learn/fundamentals/api-routes)
 
 ### Step 3.1: Create Validation Schema
 
@@ -707,7 +703,7 @@ export type PostAdminCreateBrandType = z.infer<typeof PostAdminCreateBrand>
 - Makes schemas reusable
 - Follows Medusa conventions
 
-**Documentation**: [Zod Validation](#) | [API Validation Guide](#)
+**Documentation**: [API Validation Guide](https://docs.medusajs.com/learn/fundamentals/api-routes/validation)
 
 ### Step 3.2: Create the API Route
 
@@ -780,7 +776,7 @@ File path: src/api/store/products/route.ts
 Route path: GET /store/products
 ```
 
-**Documentation**: [API Route Structure](#) | [Route Parameters](#)
+**Documentation**: [Route Parameters](https://docs.medusajs.com/learn/fundamentals/api-routes/parameters)
 
 ### Step 3.3: Add Validation Middleware
 
@@ -844,7 +840,7 @@ validateAndTransformBody(PostAdminCreateBrand)
 - NOT `middleware.ts` (singular)
 - Typo causes middleware to be ignored silently!
 
-**Documentation**: [Middlewares Guide](#) | [Validation Middleware](#)
+**Documentation**: [Middlewares Guide](https://docs.medusajs.com/learn/fundamentals/api-routes/middlewares) | [Validation Middleware](https://docs.medusajs.com/learn/fundamentals/api-routes/validation)
 
 ---
 
@@ -963,8 +959,6 @@ curl -X POST 'http://localhost:9000/admin/brands' \
 - [ ] Authentication token obtained
 - [ ] Brand created successfully via cURL
 - [ ] Response contains brand with ID, name, timestamps
-
-**Documentation**: [Testing API Routes](#) | [Authentication Guide](#)
 
 ---
 
@@ -1099,6 +1093,6 @@ You'll be able to:
 - Retrieve a product's brand: `GET /admin/products/:id?fields=+brand.*`
 - List all brands with their products: `GET /admin/brands` returning linked products
 
-**Documentation**: [Module Links](#) | [Workflow Hooks](#) | [Query Guide](#)
+**Documentation**: [Module Links](https://docs.medusajs.com/learn/fundamentals/module-links) | [Workflow Hooks](https://docs.medusajs.com/learn/fundamentals/workflows/workflow-hooks) | [Query Guide](https://docs.medusajs.com/learn/fundamentals/module-links/query)
 
 When you're ready, let me know and we'll start Lesson 2!
