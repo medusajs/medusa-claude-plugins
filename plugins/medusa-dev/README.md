@@ -69,15 +69,12 @@ Here are some examples of what you can ask Claude to build:
 2. **building-admin-dashboard-customizations** - Admin UI development (widgets, pages, forms)
 3. **building-storefronts** - Storefront integration (SDK usage, React Query patterns)
 
+## Commands Included
+
+1. `/medusa-dev:db-migrate`: Run migrations in your Medusa project.
+2. `/medusa-dev:db-generate <module-name>`: Generate migrations for a module.
+3. `/medusa-dev:user <email> <password>`: Create an admin user.
+
 ## Privacy
 
 This plugin does not collect, store, or transmit any user data or conversation information. All instructional content is provided locally through skill files, and the MCP server only queries public Medusa documentation.
-
-## TODO
-
-- [x] **General skills** - Core skills for backend, admin UI, and storefront development
-- [ ] **Commands skill** - Common Medusa CLI commands:
-  - `npx medusa db:generate <module-name>` - Generate migrations
-  - `npx medusa db:migrate` - Run migrations
-  - `npx create-medusa-app` - Create new Medusa project
-  - Additional development and deployment commands
