@@ -413,6 +413,7 @@ Before implementing, watch out for these common ecommerce-specific pitfalls:
 - ❌ Showing all countries in Medusa checkout - should only show countries from cart's region
 - ❌ Dividing Medusa prices by 100 (Medusa stores prices as-is, not in cents like Stripe)
 - ❌ Missing Vite SSR config for Medusa SDK (add `ssr.noExternal: ['@medusajs/js-sdk']` to vite.config.ts)
+- ❌ Running Medusa storefront on port other than 8000 (causes CORS errors - Medusa backend expects port 8000 by default)
 - ❌ Not handling loading, error, and empty states for API calls
 - ❌ Making API calls on client-side that should be server-side (SEO, security)
 - ❌ Not implementing proper error messages ("Error occurred" vs "Product out of stock")
