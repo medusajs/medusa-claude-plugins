@@ -9,6 +9,7 @@ Use this plugin to build backend and frontend features related to Medusa.
 - [Installation with Claude Code](#installation-with-claude-code)
   - [Prerequisites](#prerequisites)
   - [Install Plugin](#install-plugin)
+- [Installation for Other AI Agents](#installation-for-other-ai-agents)
 - [Use Plugin](#use-plugin)
   - [Example Use Cases](#example-use-cases)
 - [Skills Included](#skills-included)
@@ -49,6 +50,16 @@ claude
 ```
 
 You should see the Medusa plugin listed under the Installed tab.
+
+## Installation for Other AI Agents
+
+For other AI agents like Cursor, you can use the [skills](https://skills.sh/) command to install the plugin's skills based on your AI agent:
+
+```bash
+npx skills add medusajs/medusa-agent-skills
+# choose the following skill:
+# - learning-medusa
+```
 
 ## Use Plugin
 

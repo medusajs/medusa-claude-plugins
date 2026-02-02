@@ -9,6 +9,7 @@ Use this plugin to build frontend features for ecommerce storefronts, including 
 - [Installation with Claude Code](#installation-with-claude-code)
   - [Prerequisites](#prerequisites)
   - [Install Plugin](#install-plugin)
+- [Installation for Other AI Agents](#installation-for-other-ai-agents)
 - [Use Plugin](#use-plugin)
   - [Example Use Cases](#example-use-cases)
 - [Skills Included](#skills-included)
@@ -48,6 +49,16 @@ claude
 ```
 
 You should see the Ecommerce Storefront plugin listed under the Installed tab.
+
+## Installation for Other AI Agents
+
+For other AI agents like Cursor, you can use the [skills](https://skills.sh/) command to install the `storefront-best-practices` skill based on your AI agent:
+
+```bash
+npx skills add medusajs/medusa-agent-skills
+# choose the following skill:
+# - storefront-best-practices
+```
 
 ## Use Plugin
 

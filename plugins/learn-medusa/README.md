@@ -7,6 +7,7 @@ An interactive, guided tutorial for learning Medusa development from scratch by 
 - [Installation with Claude Code](#installation-with-claude-code)
   - [Prerequisites](#prerequisites)
   - [Install Plugin](#install-plugin)
+- [Installation for Other AI Agents](#installation-for-other-ai-agents)
 - [Usage](#usage)
 - [What You'll Learn](#what-youll-learn)
   - [Lesson 1: Build Custom Features (45-60 min)](#lesson-1-build-custom-features-45-60-min)
@@ -46,6 +47,21 @@ claude
 
 ```bash
 /plugin
+```
+
+## Installation for Other AI Agents
+
+For other AI agents like Cursor, you can use the [skills](https://skills.sh/) command to install the plugin's skills based on your AI agent:
+
+```bash
+npx skills add medusajs/medusa-agent-skills
+# choose the following skills:
+# - building-with-medusa
+# - building-admin-dashboard-customizations
+# - building-storefronts
+# - db-generate
+# - db-migrate
+# - new-user
 ```
 
 ## Usage

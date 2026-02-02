@@ -5,7 +5,7 @@ A collection of skills composed as Claude Code plugins for building Medusa appli
 These skills can be used with any agent, as explained in the [Usage with Other Agents](#usage-with-other-agents) section.
 
 - [Available Plugins](#available-plugins)
-- [Installation](#installation)
+- [Installation for Claude Code](#installation-for-claude-code)
 - [Usage](#usage)
 - [Usage with Other Agents](#usage-with-other-agents)
 - [Privacy](#privacy)
